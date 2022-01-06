@@ -1,0 +1,35 @@
+Say a beacon is at absolute coords [x,y,z].
+For the following list, (+x, +y) means: I am a scanner that faces positive x and considers positive y 'up'.
+Once I have chosen that, I have no degrees of freedom left, the third dimension is fixed.
+That's why I have 24 (6*4) and not 48 (6*4*2) options here. E.g. [x,y,-z] is not possible bc if I'm facing +x and +y is up for me,
+then I HAVE TO consider +z to be on my right, it cannot be on my left.
+
+(+x, +y): [x,y,z]
+(+x, -y): [x,-y,-z]
+(+x, +z): [x,z,-y] 
+(+x, -z): [x,-z,y] 
+
+(+y, +x): [y,x,-z]
+(+y, -x): [y,-x,z]
+(+y, +z): [y,z,x]
+(+y, -z): [y,-z,-x]
+
+(+z, +x): [z,x,y]
+(+z, -x): [z,-x,-y]
+(+z, +y): [z,y,-x]
+(+z, -y): [z,-y,x]
+
+(-x, +y): [-x,y,-z]
+(-x, -y): [-x,-y,z]
+(-x, +z): [-x,z,y]
+(-x, -z): [-x,-z,-y]
+
+(-y, +x): [-y,x,z]
+(-y, -x): [-y,-x,-z]
+(-y, +z): [-y,z,-x]
+(-y, -z): [-y,-z,x]
+
+(-z, +x): [-z,x,-y]
+(-z, -x): [-z,-x,y]
+(-z, +y): [-z,y,x]
+(-z, -y): [-z,-y,-x]
